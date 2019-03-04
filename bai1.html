@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h3>Mang so nguyen</h3>
+<p id="array"></p><br/>
+<p id="result"></p>
+<body>
+<script>
+    var integer=[];
+    let count=0;
+    var array=document.getElementById('array');
+    var data="[";
+    for (let i=0;i<10;i++){
+    integer[i]=parseInt(prompt('Nhap so nguyen:'));
+    if (i===9){
+        data+=integer[i]+" ]";
+    }
+    else {
+        data+=integer[i]+" , ";
+    }
+    if (integer[i]>=10){
+            count++;
+        }
+    }
+    array.innerHTML=data;
+    document.getElementById('result').innerHTML=" Trong mang co "+count+" phan tu lon hon hoac bang (>=) 10.";
+
+</script>
+</body>
+</html>

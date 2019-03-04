@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h3>Mang so nguyen</h3>
+<p id="array"></p>
+<p id="result"></p>
+<body>
+<script>
+    var integer=[];
+    var array=document.getElementById('array');
+    var result=document.getElementById('result');
+    var Max=0;
+    var digit;
+    var data="[ "
+    for (let i=0;i<10;i++){
+        integer[i]=parseInt(prompt('Nhap so nguyen:'));
+        if (i===9){
+        data+=integer[i]+" ]"
+        }
+        else {
+            data+=integer[i]+' , ';
+        }
+        if (integer[i]>=Max){
+            Max=integer[i];
+            digit=i;
+        }
+    }
+    array.innerHTML=data;
+    result.innerHTML=" Phan tu lon nhat trong mang la: "+Max+"<br/>"+"Chi so cua phan tu Max la: "+ digit;
+
+</script>
+</body>
+</html>

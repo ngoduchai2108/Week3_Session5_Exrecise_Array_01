@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h3>Mang so nguyen</h3>
+<p id="array"></p>
+<P id="new_array"></P>
+<body>
+<script>
+    var array=document.getElementById('array');
+    var new_array=document.getElementById('new_array');
+    var integer=[];
+    var data1="[";
+    var data2="[";
+    for (let i=0;i<10;i++){
+        integer[i]=parseInt(prompt('Nhap so nguyen: '));
+        if (i===9){
+            data1+=integer[i]+" ]";
+        }
+        else {
+            data1+=integer[i]+" , ";
+        }
+    } 
+    for (let j=0;j<9;j++){
+        for (let i=0;i<9;i++){
+            if (integer[i]<integer[i+1]){
+                let b=integer[i];
+                integer[i]=integer[i+1];
+                integer[i+1]=b;
+            }
+        } 
+    }
+    for (let i=0;i<10;i++){
+        if (i===9){
+            data2+=integer[i]+" ]";
+        }
+        else {
+            data2+=integer[i]+" , ";
+        }
+    }
+    array.innerHTML=data1;
+    new_array.innerHTML=data2;
+</script>
+</body>
+</html>

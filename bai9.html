@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h3>Noi 2 mang so nguyen</h3>
+<p id="array1"></p>
+<p id="array2"></p>
+<p id="array3"></p>
+<body>
+<script>
+    var array1=document.getElementById('array1');
+    var array2=document.getElementById('array2');
+    var array3=document.getElementById('array3');
+    var integer1=[];
+    var integer2=[];
+    var integer3=[];
+    var data1=" [ ";
+    var data2=" [ ";
+    var data3=" [ ";
+    for (let i=0;i<10;i++){
+        integer1[i]=parseInt(prompt("Nhap phan tu cho mang thu nhat:"));
+        if (i===9){
+            data1+=integer1[i]+" ]";
+        }
+        else {
+            data1+=integer1[i]+" , ";
+        }
+    }
+    for (let i=0;i<10;i++){
+        integer2[i]=parseInt(prompt("Nhap phan tu cho mang thu hai:"));
+        if (i===9){
+            data2+=integer2[i]+" ]";
+        }
+        else {
+            data2+=integer2[i]+" , ";
+        }
+    }
+    let j=0;
+    for (let i=0;i<20;i++){
+        if (i<10){
+            integer3[i]=integer1[i];
+            data3+=integer3[i]+" , ";
+        }
+        else {
+            integer3[i]=integer2[j];
+            j++;
+            if (i===19){
+                data3+=integer3[i]+" ]";
+            }
+            else {
+                data3+=integer3[i]+" , ";
+            }
+        }
+    }
+    array1.innerHTML=data1;
+    array2.innerHTML=data2;
+    array3.innerHTML=data3;
+</script>
+
+</body>
+</html>
